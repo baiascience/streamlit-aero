@@ -53,6 +53,7 @@ year_to_filter = st.sidebar.slider('Escolha o ano da análise', 2008,2018, 2010)
 st.sidebar.subheader('Tabela')
 tabela = st.sidebar.empty()
 
+
 #multiselection com os labels únicos dos tipos de classificação
 label_to_filter = st.sidebar.multiselect(label='Escolha a clssificação de ocorrência', options=labels, default=['ACIDENTE'])
 
@@ -65,8 +66,7 @@ A base de dados de ocorrências aeronáuticas é gerenciada pelo ***Centro de In
 
 """)
 
-if tabela.checkbox('Mostrar tabela de dados'):
-    st.write(filtered_df)
+
 
 #MAIN
 st.title('CENIPA - Acidentes Aeronáuticos')
@@ -114,6 +114,8 @@ st.pydeck_chart(pdk.Deck(
     ],
 ))
 
+if tabela.checkbox('Mostrar tabela de dados'):
+    st.write(filtered_df)
 
 
 

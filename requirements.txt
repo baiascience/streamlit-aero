@@ -1,0 +1,5 @@
+pandas
+numpy
+streamlit == 0.69.0
+pydeck
+
